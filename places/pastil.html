@@ -73,12 +73,20 @@
 
     .place-section img {
         display: block;
-        width: 80%;
+        width: auto;
         height: 450px;
-        object-fit: cover;
+        object-fit:cover;
         margin: 20px auto;
         border-radius: 10px;
+        border: 10px solid black;
+         transition: 0.5s ease;
+
     }
+    .place-section img:hover {
+    border-color: #00BFA6;
+    box-shadow: 20px 20px 20px black;
+    transform: scale(1.5);
+}
 
     .description {
         background-color: #FFFDF5;
