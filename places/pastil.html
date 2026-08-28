@@ -142,6 +142,109 @@
         color: #FFD700;
         font-size: 16px;
     }
+         .suggest-form {
+        background-color: #FFD700;
+        padding: 30px;
+        border-radius: 20px;
+        margin: 50px auto;
+        border: 10px solid #000000;
+        width: 70%;
+        text-align: center;
+    }
+
+    .suggest-form h2 {
+        color: #111111;
+        font-size: 40px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .suggest-form p {
+        color: #111111;
+        font-size: 20px;
+    }
+
+    .suggest-form label {
+        color: #111111;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .suggest-form input[type="text"],
+    .suggest-form input[type="email"] {
+        padding: 10px;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    .suggest-form fieldset {
+        border: 5px solid #000000;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 25px auto;
+        width: 70%;
+        text-align: left;
+    }
+
+    .suggest-form legend {
+        color: #111111;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+
+    .category-option,
+    .good-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px auto;
+        width: 200px;
+    }
+
+    .category-option input,
+    .good-option input {
+        margin: 0;
+    }
+
+    .category-option label,
+    .good-option label {
+        margin: 0;
+    }
+
+    .good-points {
+        border: 5px solid #000000;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 25px auto;
+        width: 70%;
+        text-align: center;
+}
+
+    .good-points p {
+         margin-top: 0;
+         font-weight: bold;
+}
+
+    .suggest-form button {
+        background-color: #2C0303;
+        color: #FFD700;
+        padding: 12px 25px;
+        border: 3px solid #000000;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin-top: 30px;
+    }
+
+    .suggest-form button:hover {
+        background-color: #008F7A;
+        color: black;
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px #2C0303;
+    }
 </style>
 
 <html>
@@ -232,7 +335,153 @@
         </table>
 
     </section>
+              <section class="suggest-form">
 
+        <h2>Suggest a Place</h2>
+
+        <p>
+            Know an affordable place near TUP?
+            Suggest it for the guide!
+        </p>
+
+        <form>
+
+            <label for="place-name">
+                Place Name:
+            </label>
+
+            <input
+                type="text"
+                id="place-name"
+                name="place-name"
+                required>
+
+            <br><br>
+
+            <fieldset>
+
+                <legend>
+                    What type of place is it?
+                </legend>
+
+                <div class="category-option">
+
+                    <input
+                        type="radio"
+                        id="food"
+                        name="category"
+                        value="food">
+
+                    <label for="food">
+                        Food Spot
+                    </label>
+
+                </div>
+
+                <div class="category-option">
+
+                    <input
+                        type="radio"
+                        id="study"
+                        name="category"
+                        value="study">
+
+                    <label for="study">
+                        Study Spot
+                    </label>
+
+                </div>
+
+                <div class="category-option">
+
+                    <input
+                        type="radio"
+                        id="outdoors"
+                        name="category"
+                        value="outdoors">
+
+                    <label for="outdoors">
+                        Outdoors
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <div class="good-points">
+
+                <p>What's good about it?</p>
+
+                <div class="good-option">
+
+                    <input
+                        type="checkbox"
+                        id="affordable"
+                        name="good-points"
+                        value="affordable">
+
+                    <label for="affordable">
+                        Affordable
+                    </label>
+
+                </div>
+
+                <div class="good-option">
+
+                    <input
+                        type="checkbox"
+                        id="good-wifi"
+                        name="good-points"
+                        value="good-wifi">
+
+                    <label for="good-wifi">
+                        Good Wi-Fi
+                    </label>
+
+                </div>
+
+                <div class="good-option">
+
+                    <input
+                        type="checkbox"
+                        id="quiet"
+                        name="good-points"
+                        value="quiet">
+
+                    <label for="quiet">
+                        Quiet
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <br>
+
+            <label for="contact-email">
+                Contact Email:
+            </label>
+
+            <input
+                type="email"
+                id="contact-email"
+                name="contact-email"
+                required>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit">
+                Suggest Place
+            </button>
+
+        </form>
+
+    </section>
 </main>
 
 
