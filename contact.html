@@ -7,6 +7,7 @@
         margin: 0;
     }
 
+    /* HEADER */
     header {
         background-color: rgb(44, 3, 3);
         padding: 10px;
@@ -37,21 +38,22 @@
     }
 
     nav a {
-            color: #00BFA6;
-            font-size: 20px;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 10px;
-            transition: 0.3s ease;
-        }
+        color: #00BFA6;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+    }
 
-        nav a:hover {
-            color: #FFD700;
-            background-color: #008F7A;
-            box-shadow: 0 0 15px #00BFA6;
-            cursor: progress;
-        }
+    nav a:hover {
+        color: #FFD700;
+        background-color: #008F7A;
+        box-shadow: 0 0 15px #00BFA6;
+        cursor: progress;
+    }
 
+    /* MAIN */
     main {
         padding: 30px;
     }
@@ -101,6 +103,85 @@
         color: red;
     }
 
+    /* CONTACT FORM */
+    form {
+        width: 70%;
+        margin: 40px auto;
+        text-align: left;
+    }
+
+    fieldset {
+        background-color: #fcfcfc;
+        border: 5px solid #000000;
+        border-radius: 15px;
+        padding: 25px;
+    }
+
+    legend {
+        background-color: rgb(44, 3, 3);
+        color: gold;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        color: #000000;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        background-color: white;
+        color: #000000;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: 3px solid #00BFA6;
+        box-shadow: 0 0 10px #00BFA6;
+    }
+
+    select:hover {
+        background-color: black;
+        color: white;
+    }
+
+    button {
+        display: block;
+        margin: 25px auto 5px;
+        padding: 15px 25px;
+        background-color: rgb(44, 3, 3);
+        color: gold;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #008F7A;
+        color: #FFD700;
+        box-shadow: 0 0 15px #00BFA6;
+        transform: translateY(-5px);
+    }
+
+    /* FOOTER */
     footer {
         background-color: rgb(44, 3, 3);
         padding: 20px;
@@ -158,6 +239,65 @@
             </li>
 
         </ul>
+
+    </section>
+
+    <!-- REAL CONTACT FORM -->
+    <section>
+
+        <h2>Send a Message</h2>
+
+        <form>
+
+            <fieldset>
+
+                <legend>Your details</legend>
+
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required>
+
+                <br><br>
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required>
+
+                <br><br>
+
+                <label for="subject">Subject</label>
+                <select
+                    id="subject"
+                    name="subject">
+
+                    <option value="suggest-place">Suggest a Place</option>
+                    <option value="correct-detail">Correct a Detail</option>
+                    <option value="ask-question">Ask a Question</option>
+                    <option value="report-issue">Report an Issue</option>
+                    <option value="something-else">Something Else</option>
+
+                </select>
+
+                <br><br>
+
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required></textarea>
+
+                <button type="submit">Send message</button>
+
+            </fieldset>
+
+        </form>
 
     </section>
 
