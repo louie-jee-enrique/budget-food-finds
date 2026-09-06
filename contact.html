@@ -1,194 +1,7 @@
 <html>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #000702;
-        margin: 0;
-    }
-    header {
-        background-color: rgb(44, 3, 3);
-        padding: 10px;
-        position: relative;
-    }
-
-    h1 {
-        color: #fcfcfc;
-        text-align: center;
-        font-family: cursive;
-        font-size: 50px;
-        margin: 10px;
-    }
-
-    nav {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        gap: 10px;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav a {
-        color: #00BFA6;
-        font-size: 20px;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 10px;
-        transition: 0.3s ease;
-    }
-
-    nav a:hover {
-        color: #FFD700;
-        background-color: #008F7A;
-        box-shadow: 0 0 15px #00BFA6;
-        cursor: progress;
-    }
-
-    main {
-        padding: 30px;
-    }
-
-    section {
-        background-color: gold;
-        padding: 30px;
-        border-radius: 20px;
-        border: 10px solid #000000;
-        width: 60%;
-        margin: 50px auto;
-        text-align: center;
-    }
-
-    h2 {
-        color: #000000;
-        font-size: 45px;
-    }
-
-    p {
-        color: #000000;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-
-    section ul {
-        list-style-type: disc;
-        text-align: left;
-        width: 70%;
-        margin: 20px auto;
-    }
-
-    section li {
-        background-color: #fcfcfc;
-        margin: 15px 0;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 20px;
-    }
-
-    section a {
-        color: rgb(90, 10, 10);
-        text-decoration: none;
-    }
-
-    section a:hover {
-        color: red;
-    }
-
-    form {
-        width: 70%;
-        margin: 40px auto;
-        text-align: left;
-    }
-
-    fieldset {
-        background-color: #fcfcfc;
-        border: 5px solid #000000;
-        border-radius: 15px;
-        padding: 25px;
-    }
-
-    legend {
-        background-color: rgb(44, 3, 3);
-        color: gold;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    label {
-        display: block;
-        color: #000000;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 12px;
-        border: 3px solid #000000;
-        border-radius: 10px;
-        background-color: white;
-        color: #000000;
-        font-size: 18px;
-        font-family: Arial, sans-serif;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-        outline: 3px solid #00BFA6;
-        box-shadow: 0 0 10px #00BFA6;
-    }
-
-    select:hover {
-        background-color: black;
-        color: white;
-    }
-
-    button {
-        display: block;
-        margin: 25px auto 5px;
-        padding: 15px 25px;
-        background-color: rgb(44, 3, 3);
-        color: gold;
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-
-    button:hover {
-        background-color: #008F7A;
-        color: #FFD700;
-        box-shadow: 0 0 15px #00BFA6;
-        transform: translateY(-5px);
-    }
-
-    footer {
-        background-color: rgb(44, 3, 3);
-        padding: 20px;
-        margin-top: 50px;
-        text-align: center;
-    }
-
-    footer p {
-        color: gold;
-        font-size: 16px;
-    }
-</style>
+<head>
+    <link rel="stylesheet" href="pagkain.css">
+</head>
 
 <body>
 
@@ -208,7 +21,7 @@
 
 <main>
 
-    <section>
+    <section class="contact-section">
 
         <h2>Contact Me</h2>
 
@@ -217,7 +30,7 @@
             you can contact me through the methods below.
         </p>
 
-        <ul>
+        <ul class="contact-list">
 
             <li>
                 Email:
@@ -238,11 +51,11 @@
     </section>
 
     <!-- REAL CONTACT FORM -->
-    <section>
+    <section class="contact-section">
 
         <h2>Send a Message</h2>
 
-        <form>
+        <form class="contact-form">
 
             <fieldset>
 

@@ -1,254 +1,7 @@
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #000702;
-        margin: 0;
-    }
-
-    header {
-        background-color: #2C0303;
-        padding: 10px;
-        position: relative;
-    }
-
-    h1 {
-        color: #FFFFFF;
-        text-align: center;
-        font-family: cursive;
-        font-size: 50px;
-        margin: 10px;
-    }
-
-    nav {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        gap: 10px;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav a {
-        color: #00BFA6;
-        font-size: 20px;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 10px;
-        transition: 0.3s ease;
-    }
-
-    nav a:hover {
-        color: #FFD700;
-        background-color: #008F7A;
-        box-shadow: 0 0 15px #00BFA6;
-        cursor: progress;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    .place-title {
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 60px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    .place-section {
-        background-color: #FFD700;
-        padding: 30px;
-        border-radius: 20px;
-        margin: 30px auto 100px;
-        border: 10px solid #000000;
-        width: 70%;
-        text-align: center;
-    }
-
-    .place-section img {
-        display: block;
-        width: auto;
-        height: 450px;
-        object-fit:cover;
-        margin: 20px auto;
-        border-radius: 10px;
-        border: 10px solid black;
-         transition: 0.5s ease;
-
-    }
-    .place-section img:hover {
-    border-color: #00BFA6;
-    box-shadow: 20px 20px 20px black;
-    transform: scale(1.5);
-}
-
-    .description {
-        background-color: #FFFDF5;
-        padding: 25px;
-        border-radius: 20px;
-        border: 5px solid #000000;
-        margin: 30px auto;
-        width: 80%;
-    }
-
-    .description h2 {
-        color: #111111;
-        font-size: 35px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    .description p {
-        color: #111111;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-
-    table {
-        width: 80%;
-        margin: 30px auto;
-        border-collapse: collapse;
-        background-color: #FFFDF5;
-        font-size: 18px;
-    }
-
-    th {
-        background-color: #2C0303;
-        color: #FFD700;
-        padding: 15px;
-        border: 3px solid #000000;
-    }
-
-    td {
-        color: #111111;
-        padding: 15px;
-        border: 3px solid #000000;
-        text-align: center;
-    }
-
-    footer {
-        background-color: #2C0303;
-        padding: 20px;
-        margin-top: 50px;
-        text-align: center;
-    }
-
-    footer p {
-        color: #FFD700;
-        font-size: 16px;
-    }
-         .suggest-form {
-        background-color: #FFD700;
-        padding: 30px;
-        border-radius: 20px;
-        margin: 50px auto;
-        border: 10px solid #000000;
-        width: 70%;
-        text-align: center;
-    }
-
-    .suggest-form h2 {
-        color: #111111;
-        font-size: 40px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    .suggest-form p {
-        color: #111111;
-        font-size: 20px;
-    }
-
-    .suggest-form label {
-        color: #111111;
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .suggest-form input[type="text"],
-    .suggest-form input[type="email"] {
-        padding: 10px;
-        border: 3px solid #000000;
-        border-radius: 10px;
-        font-size: 17px;
-    }
-
-    .suggest-form fieldset {
-        border: 5px solid #000000;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 25px auto;
-        width: 70%;
-        text-align: left;
-    }
-
-    .suggest-form legend {
-        color: #111111;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 5px 10px;
-    }
-
-    .category-option,
-    .good-option {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin: 10px auto;
-        width: 200px;
-    }
-
-    .category-option input,
-    .good-option input {
-        margin: 0;
-    }
-
-    .category-option label,
-    .good-option label {
-        margin: 0;
-    }
-
-    .good-points {
-        border: 5px solid #000000;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 25px auto;
-        width: 70%;
-        text-align: center;
-}
-
-    .good-points p {
-         margin-top: 0;
-         font-weight: bold;
-}
-
-    .suggest-form button {
-        background-color: #2C0303;
-        color: #FFD700;
-        padding: 12px 25px;
-        border: 3px solid #000000;
-        border-radius: 15px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.3s ease;
-        margin-top: 30px;
-    }
-
-    .suggest-form button:hover {
-        background-color: #008F7A;
-        color: black;
-        transform: translateY(-5px);
-        box-shadow: 0 0 15px #2C0303;
-    }
-</style>
-
 <html>
-
+<head>
+    <link rel="stylesheet" href="../pagkain.css">
+</head>
 <body>
 
 <header>
@@ -345,19 +98,16 @@
         </p>
 
         <form>
-
-            <label for="place-name">
-                Place Name:
-            </label>
-
+            <div class="plis">
+            <label for="place-name">Place Name:</label>
             <input
                 type="text"
                 id="place-name"
                 name="place-name"
                 required>
-
+          
             <br><br>
-
+             </div>
             <fieldset>
 
                 <legend>
@@ -460,7 +210,7 @@
 
 
             <br>
-
+            <div class="hahay">
             <label for="contact-email">
                 Contact Email:
             </label>
@@ -475,6 +225,7 @@
             <br>
             <br>
             <br>
+            </div>
             <button type="submit">
                 Suggest Place
             </button>
