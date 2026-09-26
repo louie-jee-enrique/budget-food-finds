@@ -44,12 +44,69 @@ a {
 
 /*3. LAYOUT REGIONS*/
 
+.side {
+        display: grid;
+        grid-template-columns: 1fr;
+         grid-template-areas:
+        "masthead"
+        "main"
+        "side"
+        "foot";
+        gap: 16px;
+}
+/*TABLET AND DESKTOP LAYOUT*/
+
+@media (min-width: 700px) {
+    .side{
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side main"
+            "foot foot";
+    }
+}
+
 .heyder {
     background-color: var(--dark-red);
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    grid-area: masthead;
+}
+aside {
+    grid-area: side;
+}
+aside h2 {
+    color: var(--brand-color);
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left:5px ;
+    border-radius: 10px;
+    background-color: var(--dark-red);
+    transition: 0.5s ease-in-out;
+}
+aside h2:hover{
+    color: var(--dark-ink);
+    background-color: var(--brand-color);
+    box-shadow: 0 0 20px var(--dark-ink);
+    transform: translateX(20px) scale(1);
+}
+.una {
+    background-color: var(--white);
+    border:5px solid var(--brand-color);
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size:25px ;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+aside .una:hover{
+    transform: translateY(50px) scale(1.1);
+    cursor:progress;
 }
 
 h1 {
@@ -85,6 +142,7 @@ h1 {
 
 main {
     padding: 30px;
+    grid-area: main;
 }
 
 footer {
@@ -92,6 +150,7 @@ footer {
     padding: 20px;
     margin-top: 50px;
     text-align: center;
+    grid-area: foot;
 }
 
 footer p {
@@ -118,11 +177,10 @@ footer p {
 
 .home-feature {
     background-color: var(--gold);
-    padding: 30px;
+    
     border-radius: 20px;
-    margin: 50px auto 100px;
-    border: 10px solid var(--black);
-    width: 50%;
+    margin: 50px auto ;
+    width: 80%;
     height: 700px;
     text-align: center;
     display: flex;
@@ -134,10 +192,11 @@ footer p {
     
     display: block;
     object-fit: cover;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    border-radius: 10px;
-    margin: 0;  
+    border-radius: 30px;
+    margin: auto; 
+    padding: 20px; 
 }
 
 .place {
@@ -226,17 +285,34 @@ footer p {
 
 
 /*7. ABOUT PAGE*/
-
+.bout {
+    background-color: var(--white);
+    border:5px solid var(--brand-color);
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size:25px ;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 40px;
+}
+.bout ul {
+    list-style-type: square;
+}
+aside .bout:hover{
+    transform: translateY(50px) scale(1.1);
+    cursor:progress;
+}
 .about-section {
     background-color: var(--gold);
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     border: 10px solid var(--black);
-    width: 60%;
+    width: 80%;
     margin: 50px auto;
     text-align: center;
     transition: 0.3s ease;
 }
+
 
 .about-section:hover {
     transform: translateY(-10px);
@@ -246,7 +322,7 @@ footer p {
 
 .about-section h2 {
     color: var(--black);
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .about-section p {
@@ -256,7 +332,7 @@ footer p {
 }
 
 .about-image {
-    width: 90%;
+    width: 70%;
     height: auto;
     border-radius: 15px;
     margin-top: 20px;
@@ -264,13 +340,27 @@ footer p {
 
 
 /*8. CONTACT PAGE*/
+.busog {
+    background-color: var(--white);
+    border:5px solid var(--brand-color);
+    margin-left: 10px;
+    border-radius: 40px;
+    font-size:25px ;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 40px;
+}
+aside .busog:hover{
+    transform: translateY(50px) scale(1.1);
+    cursor:progress;
 
+}
 .contact-section {
     background-color: var(--gold);
     padding: 30px;
     border-radius: 20px;
     border: 10px solid var(--black);
-    width: 60%;
+    width: 100%;
     margin: 50px auto;
     text-align: center;
 }
@@ -315,10 +405,15 @@ footer p {
 /*9. CONTACT FORM*/
 
 .contact-form {
-    width: 70%;
-    margin: 40px auto;
+    width: 60%;
     text-align: left;
+    margin: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: auto;
 }
+
 
 .contact-form fieldset {
     background-color: var(--white);
@@ -357,6 +452,7 @@ footer p {
     color: var(--dark-ink);
     font-size: 18px;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 .contact-form input:focus,
@@ -403,7 +499,21 @@ footer p {
 
 
 /*10. PLACE DETAIL PAGE*/
-
+.mil {
+    background-color: var(--white);
+    border:5px solid var(--brand-color);
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size:25px ;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+}
+aside .mil:hover{
+    transform: translateY(50px) scale(1.1);
+    cursor:progress;
+}
 .place-title {
     color: var(--white);
     text-align: center;
@@ -411,6 +521,41 @@ footer p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.seseg{
+    background-color: var(--white);
+    border:5px solid var(--brand-color);
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size:25px ;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 40px;
+}
+.seseg ul {
+    list-style: none;
+  padding: 0;
+}
+.seseg li {
+  position: relative;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+.seseg li::before {
+  content: "";
+  position: absolute;
+  left: 5;
+  top: 24%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 40px;
+  background-image: url("puto.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+aside .seseg:hover{
+    transform: translateY(50px) scale(1.1);
+    cursor:progress;
+}
 .place-section {
     background-color: var(--gold);
     padding: 30px;
