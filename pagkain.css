@@ -258,6 +258,142 @@ footer p {
 }
 
 
+.guide-statistics {
+    background-color: var(--light-background);
+    color: var(--dark-ink);
+    padding: 20px;
+    margin: 24px 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 5px solid var(--gold);
+    transition: transform 0.5s ease-in-out;
+}
+
+.guide-statistics:hover {
+transform: translateX(10px) rotate(10deg) translateY(5px);
+transform: perspective(700px) translate3d(10px, 0, 20px) rotateY(30deg);
+}
+
+.guide-statistics h2 {
+    color: var(--green);
+    font-size: 30px;
+}
+
+.guide-statistics p {
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.count {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content:space-evenly;
+    gap: 24%;
+    align-items: center;
+    
+}
+
+.place-decisions{
+    background-color: var(--white);
+}
+
+#place-n{
+    text-align: center;
+    border-bottom: 3px solid var(--brand-color);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#distance-note{
+    display: flex;
+    border-bottom: 3px solid var(--brand-color) ;
+}
+
+#shop-status {
+    text-align: left;
+    display: block;
+    
+}
+
+.place-c {
+    background-color: var(--light-background);
+    padding: 5px;
+    border-radius: 20px;
+    border: 3px solid var(--black);
+    border-left: 10px solid var(--brand-color);
+    flex: 1 1 240px;
+    text-align:left;
+    transition: 0.3s ease;
+    display: flex;
+    align-items:stretch;
+    flex-direction: column;
+    justify-content:space-around;
+
+
+}
+
+.place-c:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px var(--brand-color);
+    border-left-color: var(--brand-color);
+}
+
+.place-c h3 {
+    color: var(--dark-ink);
+    text-align: center;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.place-c p {
+    color: var(--dark-ink);
+    text-align: left;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.place-c p:first-of-type {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.place-c img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+    background-color: green;
+    width: 100px;
+    border-radius: 20px;
+    
+}
+
+.unavailable {
+    color: red;
+    background-color: red;
+    font-weight: bold;
+    width: 100px;
+    border-radius: 20px;
+}
+
 
 /*6. READ MORE BUTTON*/
 
@@ -671,6 +807,7 @@ td {
     border: 3px solid var(--black);
     border-radius: 10px;
     font-size: 17px;
+    width: auto;
 }
 .plis input:focus {
     color: var(--black);
